@@ -97,7 +97,7 @@ I watched Chirag's Week 1 - Spending Considerations;
 4. Got to know about CloudTrails default 90-day api request log.
 
 ##Adding the notifications tab
-add a notification section to the open api.
+1. add a notification section to the open api.
 ```yaml
 /api/activities/notifictions:
     get:
@@ -115,3 +115,4 @@ add a notification section to the open api.
                 items:
                   $ref: '#/components/schemas/Message'
  ```
+2. preview the api to be sure it works fine, should look something like this;
