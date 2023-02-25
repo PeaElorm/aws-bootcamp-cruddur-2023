@@ -96,3 +96,6 @@ I watched Chirag's Week 1 - Spending Considerations;
 3. I also got to know about AWS cloud9; how it works with ec2 instances in the background and should be avoided if there is already a running EC2 for other projects in order to avoid high cost.
 4. Got to know about CloudTrails default 90-day api request log.
 
+##Adding the notifications tab
+
+
