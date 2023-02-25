@@ -96,3 +96,23 @@ I watched Chirag's Week 1 - Spending Considerations;
 3. I also got to know about AWS cloud9; how it works with ec2 instances in the background and should be avoided if there is already a running EC2 for other projects in order to avoid high cost.
 4. Got to know about CloudTrails default 90-day api request log.
 
+##Adding the notifications tab
+1. add a notification section to the open api.
+```yaml
+/api/activities/notifictions:
+    get:
+      description: 'Return a feed of activity for all of those i follow'
+      tags:
+        - activities
+      parameters: []
+      responses:
+        '200':
+          description: Returns an array of activities
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Message'
+ ```
+2. preview the api to be sure it works fine, should look something like this;
