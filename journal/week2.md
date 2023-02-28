@@ -24,3 +24,31 @@ opentelemetry-exporter-otlp-proto-http
 opentelemetry-instrumentation-flask 
 opentelemetry-instrumentation-requests
 ``` 
+
+pip install -r requirements.txt in your backend-flask directory
+
+2. Initializing
+Add the following to your existing Flask app initialization file app.py (or similar). These updates will create and initialize a tracer and Flask instrumentation to send data to Honeycomb:
+Updates to the app.py file
+```yaml
+from opentelemetry import trace
+from opentelemetry.instrumentation.flask import FlaskInstrumentor
+from opentelemetry.instrumentation.requests import RequestsInstrumentor
+from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
+from opentelemetry.sdk.trace import TracerProvider
+from opentelemetry.sdk.trace.export import BatchSpanProcessor
+```
+Initialize tracing and an exporter that can send data to Honeycomb;
+```yaml
+provider = TracerProvider()
+processor = BatchSpanProcessor(OTLPSpanExporter())
+provider.add_span_processor(processor)
+trace.set_tracer_provider(provider)
+tracer = trace.get_tracer(__name__)
+```
+
+# Initialize automatic instrumentation with Flask
+```yaml
+FlaskInstrumentor().instrument_app(app)
+RequestsInstrumentor().instrument()
+```
