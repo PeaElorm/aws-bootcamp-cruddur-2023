@@ -19,3 +19,4 @@ Pre-req tasks
 6. I have not created the momento account yet
 7. I used draw.io instead of lucid charts because i was having some difficulties.
 8. Created a honeycomb account
+9. Created my rollbar account with Github
