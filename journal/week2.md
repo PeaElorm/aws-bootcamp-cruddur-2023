@@ -16,11 +16,11 @@ OTEL_EXPORTER_OTLP_ENDPOINT: "https://api.honeycomb.io"
 OTEL_EXPORTER_OTLP_HEADERS: "x-honeycomb-team=${HONEYCOMB_API_KEY}"
 ```
 
-1. Install packages
+1. Install packages; Install these packages to instrument a Flask app with OpenTelemetry:
 ```yaml
-pip install opentelemetry-api \
-    opentelemetry-sdk \
-    opentelemetry-exporter-otlp-proto-http \
-    opentelemetry-instrumentation-flask \
-    opentelemetry-instrumentation-requests
+opentelemetry-api 
+opentelemetry-sdk 
+opentelemetry-exporter-otlp-proto-http 
+opentelemetry-instrumentation-flask 
+opentelemetry-instrumentation-requests
 ``` 
