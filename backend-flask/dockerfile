@@ -9,5 +9,9 @@ COPY . .
 
 ENV FLASK_ENV=development
 
+# Add the frontend and backend url env vars here
+#ENV FLASK_ENV=development FRONTEND_URL='*' BACKEND_URL='*'
+
 EXPOSE ${PORT}
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
+CMD [ "./run_app.sh"]
+
