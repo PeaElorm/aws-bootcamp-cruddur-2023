@@ -120,9 +120,20 @@ I watched Chirag's Week 1 - Spending Considerations;
 
 ##Homework Challenges
 1. Running the dockerfile CMD as an external script
-a. Created a script file and named it app_run.sh
+a. Created a script file in the backend flask and named it app_run.sh
 b. Added the following to the script file
 ```yaml
 #!/bin/bash
 > python3 -m flask run --host=0.0.0.0 --port=4567
 ```
+c. In the terminal, backend-flask, i run the following;
+```yaml
+vi run_app.sh
+chmod +x ./run_app.sh
+docker build -t  backend-flask:external .
+docker run backend-flask:external
+```
+and it gave the following outputs
+![docker build](https://user-images.githubusercontent.com/68542385/222981084-91a273d6-d3d1-4b7d-996b-6e96a0f4dbe3.PNG)
+![docker run](https://user-images.githubusercontent.com/68542385/222981087-5501ab9a-1f57-40e9-97d8-f10a3d2bcb43.PNG)
+
