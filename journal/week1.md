@@ -116,4 +116,13 @@ I watched Chirag's Week 1 - Spending Considerations;
                   $ref: '#/components/schemas/Message'
  ```
 2. preview the api to be sure it works fine, should look something like this;
-5
+
+
+##Homework Challenges
+1. Running the dockerfile CMD as an external script
+a. Created a script file and named it app_run.sh
+b. Added the following to the script file
+```yaml
+#!/bin/bash
+> python3 -m flask run --host=0.0.0.0 --port=4567
+```
