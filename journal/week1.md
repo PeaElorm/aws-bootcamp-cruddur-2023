@@ -126,7 +126,12 @@ b. Added the following to the script file
 #!/bin/bash
 > python3 -m flask run --host=0.0.0.0 --port=4567
 ```
-c. In the terminal, backend-flask, i run the following;
+c. I added the CMD in the dockerfile
+```yaml
+CMD [ "./run_app.sh"]
+```
+
+d. In the terminal, backend-flask, i run the following;
 ```yaml
 vi run_app.sh
 chmod +x ./run_app.sh
