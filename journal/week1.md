@@ -142,3 +142,4 @@ and it gave the following outputs
 ![docker build](https://user-images.githubusercontent.com/68542385/222981084-91a273d6-d3d1-4b7d-996b-6e96a0f4dbe3.PNG)
 ![docker run](https://user-images.githubusercontent.com/68542385/222981087-5501ab9a-1f57-40e9-97d8-f10a3d2bcb43.PNG)
 
+2. Push and tag a image to DockerHub 
