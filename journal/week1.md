@@ -88,8 +88,8 @@ networks: 
 ```
 3. Right click on the docker-compose.yml file and then click compose up in the dropdown. - this does both a docker build and a docker run on the container.
    ### Erros I encounted and how I solved them
-   1. failed to solve: rpc error: code = Unknown desc = failed to solve with frontend dockerfile.v0: failed to create LLB definition: dockerfile parse error line 15: unknown instruction: DOCKER  - I had to remove an external command I pasted on line 15 in my backend docker file during my backend containirization.
-   2. Had an issue commiting my code after the whole process because there were too many changes and github and gitpod were not in sync. So i resorted to commiting after every few changes and that worked. ### Spending Considerations.
+ a. failed to solve: rpc error: code = Unknown desc = failed to solve with frontend dockerfile.v0: failed to create LLB definition: dockerfile parse error line 15: unknown instruction: DOCKER  - I had to remove an external command I pasted on line 15 in my backend docker file during my backend containirization.
+ b. Had an issue commiting my code after the whole process because there were too many changes and github and gitpod were not in sync. So i resorted to commiting after every few changes and that worked. ### Spending Considerations.
 I watched Chirag's Week 1 - Spending Considerations;
 1. Explored gitpod billings and hourly calculations.
 2. I got to know about github codespaces but i did not set it up.
