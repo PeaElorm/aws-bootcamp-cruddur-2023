@@ -146,4 +146,11 @@ and it gave the following outputs
 - Created a Docker hub Account
 - docker login in my terminal
 - I typed in my username and password and successfully logged in.
-- 
+- I tagged the image using;
+```yaml
+$ docker tag backend-flask:external perfectelorm/perfect-backend-flask:external
+```
+- And then pushed the image to my repo by;
+```yaml
+$ docker push perfectelorm/perfect-backend-flask:external
+```
