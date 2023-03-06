@@ -168,18 +168,20 @@ will get back to it.
 5. Research best practices of Dockerfiles and attempt to implement it in your Dockerfile
 Some best practices;
 - Keep the number of layers to a minimum: Each instruction in a Dockerfile creates a new layer, so having too many layers can slow down the build process and result in larger images. Try to combine multiple instructions into a single layer whenever possible.
+
 - Use a lightweight base image: Using a lightweight base image can help keep the size of your final image small. Consider using a base image that only includes the software and libraries that your application requires.
+
 - Use the appropriate version of the base image: Make sure to use the appropriate version of the base image that is compatible with your application. This will ensure that your application runs correctly and that security vulnerabilities are not introduced by using an outdated base image.
 
-Avoid installing unnecessary packages: Only install the packages that your application requires. Installing unnecessary packages can increase the size of your image and potentially introduce security vulnerabilities.
+- Avoid installing unnecessary packages: Only install the packages that your application requires. Installing unnecessary packages can increase the size of your image and potentially introduce security vulnerabilities.
 
-Clean up after each instruction: Make sure to clean up any temporary files or artifacts created by each instruction. This can help keep the size of your image small and reduce the risk of security vulnerabilities.
+- Clean up after each instruction: Make sure to clean up any temporary files or artifacts created by each instruction. This can help keep the size of your image small and reduce the risk of security vulnerabilities.
 
-Use environment variables: Use environment variables to store sensitive information such as passwords or API keys. This can help keep your application secure and make it easier to manage configuration.
+- Use environment variables: Use environment variables to store sensitive information such as passwords or API keys. This can help keep your application secure and make it easier to manage configuration.
 
-Use COPY instead of ADD: Whenever possible, use the COPY instruction instead of ADD. COPY is simpler and more predictable, and doesn't include some of the additional functionality that ADD provides.
+- Use COPY instead of ADD: Whenever possible, use the COPY instruction instead of ADD. COPY is simpler and more predictable, and doesn't include some of the additional functionality that ADD provides.
 
-Use the USER instruction to run the application as a non-root user: Running the application as a non-root user can help improve the security of your application by limiting the damage that can be done in the event of a security vulnerability.
+- Use the USER instruction to run the application as a non-root user: Running the application as a non-root user can help improve the security of your application by limiting the damage that can be done in the event of a security vulnerability.
 
-Use LABEL to provide metadata about the image: Use LABEL to provide information about the image, such as the maintainer, version, and description. This can help make it easier to manage and identify images.
+- Use LABEL to provide metadata about the image: Use LABEL to provide information about the image, such as the maintainer, version, and description. This can help make it easier to manage and identify images.
 
