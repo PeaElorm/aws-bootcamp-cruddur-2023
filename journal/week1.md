@@ -159,3 +159,11 @@ $ docker push perfectelorm/perfect-backend-flask:external
 
 3. Use multi-stage building for a Dockerfile build
 Multi-stage building is a technique used in Dockerfiles to create lightweight images by breaking down the build process into multiple stages. This technique helps to reduce the size of the final image by removing unnecessary build dependencies.
+
+4. Implement a healthcheck in the V3 Docker compose file
+- With this challenge, i was getting an error;
+![healthcheck error](https://user-images.githubusercontent.com/68542385/223072965-bd7b0dd6-d1ae-4dc4-9c0d-25d042f6b398.png)
+will get back to it.
+
+5. Research best practices of Dockerfiles and attempt to implement it in your Dockerfile
+
