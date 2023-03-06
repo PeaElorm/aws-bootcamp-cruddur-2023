@@ -185,3 +185,6 @@ Some best practices;
 
 - Use LABEL to provide metadata about the image: Use LABEL to provide information about the image, such as the maintainer, version, and description. This can help make it easier to manage and identify images.
 
+
+6. Learn how to install Docker on your localmachine and get the same containers running outside of Gitpod / Codespaces
+
