@@ -143,3 +143,4 @@ and it gave the following outputs
 ![docker run](https://user-images.githubusercontent.com/68542385/222981087-5501ab9a-1f57-40e9-97d8-f10a3d2bcb43.PNG)
 
 2. Push and tag a image to DockerHub 
+- Created a Docker hub Account
