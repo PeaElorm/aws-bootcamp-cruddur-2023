@@ -144,3 +144,6 @@ and it gave the following outputs
 
 2. Push and tag a image to DockerHub 
 - Created a Docker hub Account
+- docker login in my terminal
+- I typed in my username and password and successfully logged in.
+- 
