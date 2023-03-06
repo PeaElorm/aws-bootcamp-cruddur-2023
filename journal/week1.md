@@ -156,3 +156,6 @@ $ docker push perfectelorm/perfect-backend-flask:external
 ```
 - I then double checked to be sure my image push, here is the result;
 ![docker push](https://user-images.githubusercontent.com/68542385/223066716-5f4c4c8a-35cb-4ce5-b84e-1c584d054de7.PNG)
+
+3. Use multi-stage building for a Dockerfile build
+Multi-stage building is a technique used in Dockerfiles to create lightweight images by breaking down the build process into multiple stages. This technique helps to reduce the size of the final image by removing unnecessary build dependencies.
