@@ -154,3 +154,5 @@ $ docker tag backend-flask:external perfectelorm/perfect-backend-flask:external
 ```yaml
 $ docker push perfectelorm/perfect-backend-flask:external
 ```
+- I then double checked to be sure my image push, here is the result;
+![docker push](https://user-images.githubusercontent.com/68542385/223066716-5f4c4c8a-35cb-4ce5-b84e-1c584d054de7.PNG)
