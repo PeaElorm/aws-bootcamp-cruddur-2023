@@ -1,7 +1,7 @@
 # Week 2 — Distributed Tracing
 
 ## Sending Data To HoneyComb
-1. Open your repo in gitpod and run the following in your terminal...be sure you are in the aws-bootcamp-cruddur-2023/frontend-react-js directory
+1. Open your repo in gitpod and run the following in your terminal...be sure you are in the aws-bootcamp-cruddur-2023/frontend-react-js directory. The API key is from the honeycomb account.
 ```yaml
 export HONEYCOMB_API_KEY="<API KEY>"
 gp env HONEYCOMB_API_KEY="<API KEY>"
