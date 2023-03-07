@@ -3,8 +3,8 @@
 ## Sending Data To HoneyComb
 1. Open your repo in gitpod and run the following in your terminal...be sure you are in the aws-bootcamp-cruddur-2023/frontend-react-js directory
 ```yaml
-export HONEYCOMB_API_KEY="IGIb5LZ7SNpJVAUmqlZhaC"
-gp env HONEYCOMB_API_KEY="IGIb5LZ7SNpJVAUmqlZhaC"
+export HONEYCOMB_API_KEY="<API KEY>"
+gp env HONEYCOMB_API_KEY="<API KEY>"
 
 export  HONEYCOMB_SERVICE_NAME="Cruddur"
 gp env HONEYCOMB_SERVICE_NAME="Cruddur"
