@@ -95,7 +95,7 @@ $ aws xray create-group \
 > --filter-expression "service(\"backend-flask\")"
 ```
 5. This returned my aws parameters, indicating success
-6. Next, we need to create a smapling rule the xrau services; to do this we have to create an xray.json file in 
+6. Next, we need to create a smapling rule for the xray services; to do this we have to create an xray.json file in aws-bootcamp-cruddur-2023/aws/json
 ```yaml
 {
 "SamplingRule": {
@@ -113,6 +113,31 @@ $ aws xray create-group \
     }
 }
 ```
+7. Input the following in the terminal;
+```yaml
+$ aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json
+```
+8. Next, we add the following to the app.py;
+```yaml
+...
+...
+
+# X_RAY
+from aws_xray_sdk.core import xray_recorder
+from aws_xray_sdk.ext.flask.middleware import XRayMiddleware
+
+xray_url = os.getenv("AWS_XRAY_URL")
+#xray_recorder.configure(service='backend-flask', dynamic_naming=xray_url)
+xray_recorder.configure(service='backend-flask') # To ensure all traces can be grouped under the Cruudr group created
+
+......
+......
+
+app = Flask(__name__)
+
+#XRAY
+XRayMiddleware(app, xray_recorder)
+``` 
 
 
 
