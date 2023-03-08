@@ -52,3 +52,9 @@ tracer = trace.get_tracer(__name__)
 FlaskInstrumentor().instrument_app(app)
 RequestsInstrumentor().instrument()
 ```
+
+3. Running docker compose up and check honeycomb to verify traces
+4. Here is my output in Honeycomb
+![traces1](https://user-images.githubusercontent.com/68542385/223675765-07fdbc3a-0f35-42a5-a26f-c87e9baf1db5.PNG)
+![traces 2](https://user-images.githubusercontent.com/68542385/223675792-f69b1e99-2a33-48f9-9371-2ebec6cae364.PNG)
+
