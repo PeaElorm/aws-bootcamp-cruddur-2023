@@ -87,5 +87,12 @@ services:
         ports:
             - 2000:2000/udp
 ```           
-            
+3 This sets our required environment variables and defines a container for the x-ray daemon
+4. Next was to group our traces on aws x-ray, The following command as issued in the terminal. PS: I already have the aws cli installed.
+```yaml 
+$ aws xray create-group \
+> group-name "Cruddur" \
+> filter-expression "service(\"backend-flask\")"
+```
+
 
