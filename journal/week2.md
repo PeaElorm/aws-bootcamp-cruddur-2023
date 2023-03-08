@@ -160,4 +160,10 @@ XRayMiddleware(app, xray_recorder)
 ![xray traces2](https://user-images.githubusercontent.com/68542385/223736429-aebfb3dc-83fc-4428-bf7e-8cbf5e1bf46c.PNG)
 
 
+## Configuring custom logger to send CloudWatch logs
+
+
+
+
+
 
