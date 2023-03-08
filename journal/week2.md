@@ -91,8 +91,28 @@ services:
 4. Next was to group our traces on aws x-ray, The following command as issued in the terminal. PS: I already have the aws cli installed.
 ```yaml 
 $ aws xray create-group \
-> group-name "Cruddur" \
-> filter-expression "service(\"backend-flask\")"
+> ---group-name "Cruddur" \
+> --filter-expression "service(\"backend-flask\")"
 ```
+5. This returned my aws parameters, indicating success
+6. Next, we need to create a smapling rule the xrau services; to do this we have to create an xray.json file in 
+```yaml
+{
+"SamplingRule": {
+    "RuleName": "Cruddur",
+    "ResourceARN": "*",
+    "Priority": 9000,
+    "FixedRate": 0.1,
+    "ReservoirSize": 5,
+    "ServiceName": "backend-flask",
+    "ServiceType": "*",
+    "Host": "*",
+    "HTTPMethod": "*",
+    "URLPath": "*",
+    "Version": 1
+    }
+}
+```
+
 
 
