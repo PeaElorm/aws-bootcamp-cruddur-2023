@@ -64,8 +64,12 @@ RequestsInstrumentor().instrument()
 1. To work with AWS X-ray, the following should be added to the requirement.txt file to download the needed SDK
 ```yaml
 aws-xray-sdk
+``` 
+2. run 
+```yaml
+pip install -r requirements.txt
 ```
-2. Add the following to the docker compose file
+4. Add the following to the docker compose file
 ```yaml 
 version: "3.8"
 services:
