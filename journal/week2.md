@@ -64,8 +64,12 @@ RequestsInstrumentor().instrument()
 1. To work with AWS X-ray, the following should be added to the requirement.txt file to download the needed SDK
 ```yaml
 aws-xray-sdk
+``` 
+2. run 
+```yaml
+pip install -r requirements.txt
 ```
-2. Add the following to the docker compose file
+4. Add the following to the docker compose file
 ```yaml 
 version: "3.8"
 services:
@@ -117,7 +121,20 @@ $ aws xray create-group \
 ```yaml
 $ aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json
 ```
-8. Next, we add the following to the app.py;
+8. Add Deamon service to docker compose file;
+```yaml
+  xray-daemon:
+    image: "amazon/aws-xray-daemon"
+    environment:
+      AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"
+      AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"
+      AWS_REGION: "us-east-1"
+    command:
+      - "xray -o -b xray-daemon:2000"
+    ports:
+      - 2000:2000/udp
+```
+9.  Next, we add the following to the app.py;
 ```yaml
 ...
 ...
@@ -138,6 +155,15 @@ app = Flask(__name__)
 #XRAY
 XRayMiddleware(app, xray_recorder)
 ``` 
+10. I refreshed my backend port and aws xray page, got the following output
+![xray traces](https://user-images.githubusercontent.com/68542385/223736420-7b5812d4-8963-47b9-aead-579f12ff9912.PNG)
+![xray traces2](https://user-images.githubusercontent.com/68542385/223736429-aebfb3dc-83fc-4428-bf7e-8cbf5e1bf46c.PNG)
+
+
+## Configuring custom logger to send CloudWatch logs
+
+
+
 
 
 
