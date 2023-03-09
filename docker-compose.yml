@@ -14,7 +14,16 @@ services:
     ports:
       - "4567:4567"
     volumes:
-      - ./backend-flask:/backend-flask
+      - ./backend-flask:/backend-flask  
+            
+  frontend-react-js:
+    environment:
+      REACT_APP_BACKEND_URL: "https://4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}"
+    build: ./frontend-react-js
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend-react-js:/frontend-react-js
 
   xray-daemon:
         image: "amazon/aws-xray-daemon"
@@ -25,16 +34,8 @@ services:
         command:
             - "xray -o -b xray-daemon:2000"
         ports:
-            - 2000:2000/udp    
+            - 2000:2000/udp  
             
-  frontend-react-js:
-    environment:
-      REACT_APP_BACKEND_URL: "https://4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}"
-    build: ./frontend-react-js
-    ports:
-      - "3000:3000"
-    volumes:
-      - ./frontend-react-js:/frontend-react-js
   dynamodb-local:
     # https://stackoverflow.com/questions/67533058/persist-local-dynamodb-data-in-volumes-lack-permission-unable-to-open-databa
     # We needed to add user:root to get this working.
